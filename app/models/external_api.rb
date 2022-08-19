@@ -1,0 +1,2 @@
+class ExternalApi < ApplicationRecord
+end
