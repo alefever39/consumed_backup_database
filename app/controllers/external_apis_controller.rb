@@ -13,4 +13,8 @@ class ExternalApisController < ApplicationController
       )
     render json: record
   end
+
+  def destroy
+    ExternalApi.find_by!(id: params[:id])
+  end
 end
