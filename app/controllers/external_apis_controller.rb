@@ -15,6 +15,8 @@ class ExternalApisController < ApplicationController
   end
 
   def destroy
-    ExternalApi.find_by!(id: params[:id])
+    api_to_delete = ExternalApi.find_by!(id: params[:id])
+    api_to_delete.destroy
+    head :no_content
   end
 end
